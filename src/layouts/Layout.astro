@@ -1,0 +1,54 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="text-neutral-200 bg-neutral-900 grid grid-cols-6">
+		<Header />
+		<slot />
+		<!-- <Footer/>  -->
+	</body>
+</html>
+
+<style is:global>
+	html{
+		font-family: Roboto, ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji','Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+		::-webkit-scrollbar {
+			background-color: #ff0000; /* Color de fondo */width: 10px; /* Ancho de la barra */
+		}
+		/* Cambia el color de la barra de desplazamiento */
+		::-webkit-scrollbar-thumb {
+			background-color: #ff0000; /* Color de la barra */border-radius: 5px; /* Borde redondeado */
+		}
+	}
+	.bg-glow {
+		background-color: hsla(223, 49%, 8%, 1);
+		background-image: radial-gradient(
+			at 44% 68%,
+			hsl(157, 100%, 29%) 0px,
+			transparent 50%
+		),
+		radial-gradient(at 79% 39%, hsla(289, 100%, 56%, 1) 0px, transparent 50%);
+	}
+	.isHere {
+		background-color: #f5f5f5;
+		color: #333;
+		display: hidden;
+
+	}
+</style>

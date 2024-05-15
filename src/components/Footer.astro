@@ -1,0 +1,24 @@
+---
+interface Props {
+  currentPath: string;
+}
+
+const url = new URL(Astro.request.url);
+const currentPath = url.pathname.slice(1);
+---
+
+<footer class="w-full py-4">
+  <nav class="w-full flex-justify-between items-center text-neutral-50">
+    <div class="flex justify-center space-x-4">
+        <a href="/" class={`hover:text-neutral-300 transition-colors duration-300 ease-in-out ${currentPath === '' ? 'text-primary-500 hover:text-primary-500 transition-none cursor-default' : ''}`}>
+          INICIO
+        </a>      
+        <a href="sobre_nosotros" class={`hover:text-neutral-300 transition-colors duration-300 ease-in-out ${currentPath === 'sobre_nosotros' ? 'text-primary-500 hover:text-primary-500 transition-none cursor-default' : ''}`}>
+          SOBRE NOSOTROS
+        </a>        
+        <a href="precios" class={`hover:text-neutral-300 transition-colors duration-300 ease-in-out ${currentPath === 'precios' ? 'text-primary-500 hover:text-primary-500 transition-none cursor-default' : ''}`}>
+          PRECIOS
+        </a>
+    </div>
+  </nav>
+</footer>

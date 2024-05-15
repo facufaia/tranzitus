@@ -1,0 +1,36 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Contacto from '../components/sections/Contacto.astro'
+import PQElegirnos from '../components/sections/PQElegirnos.astro'
+import List from '../components/sections/List.astro'
+import Software from '../components/sections/Software.astro'
+import VentajasIcons from '../components/sections/VentajasIcons.astro'
+import Reputacion from '../components/sections/Reputacion.astro'
+---
+
+<Layout title="Transitus">
+	<div class="absolute inset-0 shadow-none -z-10 h-full w-full items-center px-5 py-24 
+	[background:radial-gradient(125%_125%_at_50%_35%,#000_40%,#984a08_100%)]"/>
+	<main class="min-h-screen h-full col-span-6 flex flex-col gap-14">
+		<section class="text-[4rem] h-[90vh] grid grid-cols-4 font-bold leading-none px-10 items-center justify-center">
+			<img src="/public/logo.png" alt="Transitus" class='bg-neutral-400 col-span-4 -z-10 absolute w-[279px] top-40'/>
+			<h1 class="col-span-4 text-pretty text-4xl text-center">Solución logística integral en CABA
+			</h1>
+		</section>
+		<VentajasIcons/>
+		<List/>
+		<Software/>
+		<Reputacion/>
+		<PQElegirnos/>
+		<Contacto/>
+		<p>
+			Servicio de Atención al Seller 24Hs
+			checkmark negro
+			Sin Recargo por Lluvia
+			checkmark negro
+			Segunda Visita sin Cargo
+			checkmark negro
+			Seguro Contra Mercaderias en Transito
+		</p>
+	</main>
+</Layout>
