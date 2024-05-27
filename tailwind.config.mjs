@@ -1,56 +1,61 @@
-import('tailwindcss')
+import("tailwindcss");
 
-const defaultTheme = require('tailwindcss/defaultTheme')
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 export default {
-	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
-	theme: {
-		extend: {
-			fontFamily: {
-				sans: ['Roboto', ...defaultTheme.fontFamily.sans],
-			},
-			colors: {
-				primary: {
-					50: '#fffeea',
-					100: '#fff9c5',
-					200: '#fff285',
-					300: '#ffe546',
-					400: '#ffd51b',
-					500: '#ffb400',
-					600: '#e28a00',
-					700: '#bb6002',
-					800: '#984a08',
-					900: '#7c3d0b',
-					950: '#481f00',
-				},
-				secondary: {
-					50: '#fdf2ff',
-					100: '#fae3ff',
-					200: '#f4c6ff',
-					300: '#f199ff',
-					400: '#e95dff',
-					500: '#d921ff',
-					600: '#c400ff',
-					700: '#a400cf',
-					800: '#8700a9',
-					900: '#720689',
-					950: '#4d005e',
-				},
-				tertiary: {
-					50: '#edfff7',
-					100: '#d5ffef',
-					200: '#aeffe0',
-					300: '#70ffc9',
-					400: '#2bfdab',
-					500: '#00ff9c',
-					600: '#00c071',
-					700: '#00965c',
-					800: '#06754b',
-					900: '#076040',
-					950: '#003722',
-				},
-			},
-		},
-	},
-	plugins: [],
-}
+  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ["Roboto", ...defaultTheme.fontFamily.sans],
+      },
+      colors: {
+        primary: {
+          50: "#f4f1ff",
+          100: "#ebe6ff",
+          200: "#d9d0ff",
+          300: "#bdabff",
+          400: "#9e7bff",
+          500: "#8146ff",
+          600: "#7321ff",
+          700: "#6610f2",
+          800: "#540ccb",
+          900: "#470ca6",
+          950: "#290471",
+        },
+        secondary: {
+          50: "#ebfef6",
+          100: "#cefde8",
+          200: "#a2f8d6",
+          300: "#66efc2",
+          400: "#20c997",
+          500: "#05c492",
+          600: "#009f77",
+          700: "#007f63",
+          800: "#00654f",
+          900: "#015343",
+          950: "#002f26",
+        },
+        tertiary: {
+          50: "#fff8ed",
+          100: "#ffefd4",
+          200: "#ffdba9",
+          300: "#ffc072",
+          400: "#fe9b39",
+          500: "#fd7e14",
+          600: "#ee6108",
+          700: "#c54909",
+          800: "#9c3910",
+          900: "#7e3110",
+          950: "#441606",
+        },
+        darkbg: {
+          700: "#0f172a",
+          800: "#0E1324",
+          900: "#0C111F",
+        },
+      },
+    },
+  },
+  plugins: [],
+};

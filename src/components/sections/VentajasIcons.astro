@@ -1,25 +1,64 @@
 ---
-import MapPin from '../../assets/icons/MapPin.astro'
-import Storage from '../../assets/icons/Storage.astro'
-import Software from '../../assets/icons/Software.astro'
-import Motorcicle from '../../assets/icons/Motorcicle.astro'
-import Cloud from '../../assets/icons/Cloud.astro'
+import MapPin from "../../assets/icons/MapPin.astro";
+import Storage from "../../assets/icons/Storage.astro";
+import Software from "../../assets/icons/Software.astro";
+import Motorcicle from "../../assets/icons/Motorcicle.astro";
+import Cloud from "../../assets/icons/Cloud.astro";
 ---
 
-<section class="flex flex-col gap-4 py-6 px-6">
-  <div class="flex gap-3 items-center rounded-md py-2 px-2 w-fit">
-    <MapPin svgColor="text-primary-800"/>
+<section class="flex flex-col gap-6 overflow-hidden">
+  <div class="flex gap-4">
+    <div
+      class="flex gap-3 items-center rounded-md py-2 px-2 min-w-max bg-transparent fadeInFromR"
+    >
+      <MapPin svgColor="text-secondary-500" />
+    </div>
+    <div
+      class="flex gap-3 items-center rounded-md py-2 px-2 min-w-max bg-transparent fadeInFromR"
+    >
+      <Storage svgColor="text-secondary-500" />
+    </div>
+    <div
+      class="flex gap-3 items-center rounded-md py-2 px-2 min-w-max bg-transparent fadeInFromR"
+    >
+      <Motorcicle svgColor="text-secondary-500" />
+    </div>
+    <div
+      class="flex gap-3 items-center rounded-md py-2 px-2 min-w-max bg-transparent fadeInFromR"
+    >
+      <Software svgColor="text-secondary-500" />
+    </div>
+    <div
+      class="flex gap-3 items-center rounded-md py-2 px-2 min-w-max bg-transparent fadeInFromR"
+    >
+      <Cloud svgColor="text-secondary-500" />
+    </div>
   </div>
-  <div class="flex gap-3 items-center rounded-md py-2 px-2 w-fit">
-    <Storage svgColor="text-primary-800"/>
-  </div>
-  <div class="flex gap-3 items-center rounded-md py-2 px-2 w-fit">
-    <Motorcicle svgColor="text-primary-800"/>
-  </div>
-  <div class="flex gap-3 items-center rounded-md py-2 px-2 w-fit">
-    <Software svgColor="text-primary-800"/>
-  </div>
-  <div class="flex gap-3 items-center rounded-md py-2 px-2 w-fit">
-    <Cloud svgColor="text-primary-800"/>
+  <div class="flex gap-4">
+    <div
+      class="flex gap-3 items-center rounded-md py-2 px-2 min-w-max bg-transparent fadeInFromR"
+    >
+      <Software svgColor="text-secondary-500" />
+    </div>
+    <div
+      class="flex gap-3 items-center rounded-md py-2 px-2 min-w-max bg-transparent fadeInFromR"
+    >
+      <Cloud svgColor="text-secondary-500" />
+    </div>
+    <div
+      class="flex gap-3 items-center rounded-md py-2 px-2 min-w-max bg-transparent fadeInFromR"
+    >
+      <MapPin svgColor="text-secondary-500" />
+    </div>
+    <div
+      class="flex gap-3 items-center rounded-md py-2 px-2 min-w-max bg-transparent fadeInFromR"
+    >
+      <Storage svgColor="text-secondary-500" />
+    </div>
+    <div
+      class="flex gap-3 items-center rounded-md py-2 px-2 min-w-max bg-transparent fadeInFromR"
+    >
+      <Motorcicle svgColor="text-secondary-500" />
+    </div>
   </div>
 </section>

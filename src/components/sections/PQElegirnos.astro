@@ -1,14 +1,60 @@
+---
+import PhoneCheck from "../../assets/icons/PhoneCheck.astro";
+import UserCheck from "../../assets/icons/UserCheck.astro";
+import DesktopCheck from "../../assets/icons/DesktopCheck.astro";
+import CloudCheck from "../../assets/icons/CloudCheck.astro";
+import VerifiedCheck from "../../assets/icons/VerifiedCheck.astro";
+import MapPinCheck from "../../assets/icons/MapPinCheck.astro";
+import CheckBox from "../../assets/icons/CheckBox.astro";
+import MapCheck from "../../assets/icons/MapCheck.astro";
+---
 
-<section class="flex flex-col gap-3 px-6">
-  <h3 class="text-xl font-bold">¿Por qué elegirnos?</h3>
-  <ul class="flex flex-col gap-2 font-semibold">
-    <li><span class="text-secondary-600">•</span> Más de 20 años de experiencia en el mercado</li>
-    <li><span class="text-secondary-600">•</span> Personal altamente capacitado</li>
-    <li><span class="text-secondary-600">•</span> Flota propia de vehículos</li>
-    <li><span class="text-secondary-600">•</span> Tecnología de punta</li>
-    <li><span class="text-secondary-600">•</span> Atención personalizada</li>
-    <li><span class="text-secondary-600">•</span> Seguimiento de envíos en tiempo real</li>
-    <li><span class="text-secondary-600">•</span> Precios competitivos</li>
-    <li><span class="text-secondary-600">•</span> Cobertura en Capital Federal, Gran Buenos Aires y Córdoba</li>
+<section
+  class="col-span-8 flex flex-col md:grid md:grid-cols-8 gap-10 px-8 md:px-0 py-16 bg-primary-950"
+>
+  <h3 class="text-2xl font-bold mergeY md:col-start-2 md:col-end-8">
+    ¿Por qué elegirnos?
+  </h3>
+  <ul
+    class="flex flex-col gap-6 font-semibold text-lg fadeInD7s md:col-start-2 md:col-end-8"
+  >
+    <li class="text-secondary-500 flex gap-4 leading-6">
+      <VerifiedCheck />
+      <span class="text-neutral-300 relative">
+        Mas de 5 años de experiencia en el mercado
+      </span>
+    </li>
+    <li class="text-secondary-500 flex gap-4 leading-6">
+      <DesktopCheck />
+      <span class="text-neutral-300"> Personal altamente capacitado </span>
+    </li>
+    <li class="text-secondary-500 flex gap-4 leading-6">
+      <UserCheck />
+      <span class="text-neutral-300"> Flota propia de vehículos </span>
+    </li>
+    <li class="text-secondary-500 flex gap-4 leading-6">
+      <CloudCheck />
+      <span class="text-neutral-300"> Tecnología de punta </span>
+    </li>
+    <li class="text-secondary-500 flex gap-4 leading-6">
+      <PhoneCheck />
+      <span class="text-neutral-300"> Atención personalizada </span>
+    </li>
+    <li class="text-secondary-500 flex gap-4 leading-6">
+      <MapPinCheck />
+      <span class="text-neutral-300">
+        Seguimiento de envíos en tiempo real
+      </span>
+    </li>
+    <li class="text-secondary-500 flex gap-4 leading-6">
+      <CheckBox />
+      <span class="text-neutral-300"> Precios competitivos </span>
+    </li>
+    <li class="text-secondary-500 flex gap-4 leading-6">
+      <MapCheck />
+      <span class="text-neutral-300">
+        Cobertura en Capital Federal y Gran Buenos Aires
+      </span>
+    </li>
   </ul>
 </section>
