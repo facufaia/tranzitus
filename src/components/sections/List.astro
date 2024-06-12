@@ -1,8 +1,22 @@
 ---
-import Distribucion from "../atoms/Distribucion.astro"
-import Almacenamiento from "../atoms/Almacenamiento.astro"
+import Distribucion from "../atoms/Distribucion.astro";
+import Almacenamiento from "../atoms/Almacenamiento.astro";
 ---
-<section class="px-6 flex flex-col gap-12">
+
+<section class="w-full grid grid-cols-8 col-span-8 relative backdrop-blur-2xl">
+  <div
+    class="col-span-8 rounded-full h-[0.01rem] w-[0.01rem] top-[22%] right-5 absolute -z-20 glow-tertiary-700-right"
+  >
+  </div>
+  <div
+    class="col-span-8 rounded-full h-[0.01rem] w-[0.01rem] top-[50%] left-[20%] absolute -z-20 glow-tertiary-800-right"
+  >
+  </div>
+  <div class="col-span-8 -z-10 w-full h-full absolute backdrop-blur-2xl"></div>
+  <div
+    class="px-8 grid grid-cols-8 col-span-8 md:px-0 gap-12 backdrop-blur-2xl"
+  >
     <Distribucion />
-    <Almacenamiento />			
+    <Almacenamiento />
+  </div>
 </section>

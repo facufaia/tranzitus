@@ -1,6 +1,66 @@
-<section class="px-6 flex flex-col gap-3">
-  <h2 class="text-2xl font-bold">Software</h2>
-  <p class="text-neutral-200 font-semibold">
-    Tanto el cliente final como nuestras empresas clientes podrán hacer un seguimiento en tiempo real de sus envíos a través de nuestro sistema web o de la aplicación. Esta herramienta permite gestionar los envíos de forma eficiente, brindando la mejor experiencia de compra al cliente final. Con ella, podrás llevar un control desde la recepción de la mercancía hasta la entrega final, además de generar reportes y estadísticas para analizar el rendimiento de tu negocio y tomar decisiones informadas.
-  </p>
+---
+import Android from "../../assets/icons/Android.astro";
+import Apple from "../../assets/icons/Apple.astro";
+import AWSColor from "../../assets/icons/AWSColor.astro";
+import CloudflareColor from "../../assets/icons/CloudflareColor.astro";
+---
+
+<section class="col-span-8 grid grid-cols-8 px-8 md:px-0 gap-12 second-mesh">
+  <div
+    class="col-span-8 md:col-start-2 md:col-end-5 flex flex-col gap-5 font-semibold fadeIn"
+  >
+    <h4 class="text-2xl font-bold text-neutral-300 text-pretty">
+      Rastreo en Tiempo Real para una Gestión Eficiente
+    </h4>
+    <p class="text-neutral-300 text-balance">
+      Tanto el cliente final como nuestras empresas clientes podrán hacer un
+      seguimiento en tiempo real de sus envíos a través de nuestro avanzado
+      sistema web o nuestra aplicación móvil
+    </p>
+    <div class="flex gap-6 fadeIn">
+      <Android />
+      <Apple />
+    </div>
+  </div>
+  <div class="col-span-8 md:col-start-2 md:col-end-8 flex flex-col gap-8">
+    <h4
+      class="text-2xl font-bold text-neutral-300 rounded-md text-pretty fadeInD2s"
+    >
+      Soluciones Personalizadas con Tecnología de Punta
+    </h4>
+    <ul class="text-neutral-300 flex flex-col gap-4 font-semibold">
+      <li class="bg-primary-900 p-4 rounded-md text-balance scaleIn">
+        Ofrecemos soluciones personalizadas y basadas en templates, garantizando
+        una experiencia rápida, eficiente y confiable para empresas de todos los
+        tamaños
+      </li>
+      <li class="bg-primary-900 p-4 rounded-md text-balance scaleIn">
+        Utilizamos tecnología de punta desarrollada por las empresas de
+        tecnología más grandes del mundo, lo que asegura la máxima calidad y
+        seguridad en nuestros servicios
+      </li>
+    </ul>
+    <div class="flex gap-4 scaleIn">
+      <AWSColor />
+      <CloudflareColor />
+    </div>
+  </div>
+  <div
+    class="col-span-8 md:col-start-5 md:col-end-8 md:row-start-1 flex flex-col gap-8"
+  >
+    <h4 class="text-2xl font-bold text-neutral-200 text-pretty fadeIn">
+      Gestión Integral de Envíos
+    </h4>
+    <ul class="text-neutral-300 flex flex-col gap-4 font-semibold">
+      <li class="bg-primary-900 p-4 rounded-md text-balance acordeon">
+        Control desde la recepción de la mercancía hasta la entrega final
+      </li>
+      <li class="bg-primary-900 p-4 rounded-md text-balance acordeon">
+        Genera reportes y estadísticas para tomar decisiones informadas
+      </li>
+      <li class="bg-primary-900 p-4 rounded-md text-balance acordeon">
+        Adaptado para pequeñas, medianas y grandes empresas
+      </li>
+    </ul>
+  </div>
 </section>
