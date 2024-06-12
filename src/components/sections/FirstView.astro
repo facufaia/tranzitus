@@ -5,40 +5,48 @@ import Logo from "../../assets/Logo.astro";
 ---
 
 <section
-  class="relative first-mesh col-span-8 text-[4rem] font-bold min-h-screen flex flex-col justify-between pb-8"
+  class="relative first-mesh col-span-8 text-[4rem] font-bold min-h-screen flex flex-col justify-between pb-8 gap-24"
 >
-  <div class="grid grid-cols-8 items-center content-center gap-y-14 basis-full">
+  <div
+    class="flex flex-col justify-center md:grid md:grid-cols-8 md:px-10 h-full"
+  >
     <div class="absolute w-full">
       <LogoOp />
     </div>
-    <div class="hidden md:grid md:col-start-5 md:col-end-8 md:w-full">
+    <div class="hidden md:grid md:col-start-5 md:col-end-9 md:row-span-2">
       <Logo w="4em" />
     </div>
     <div
-      class="col-span-8 flex sm:bg-red-500 md:bg-green-500 md:col-start-1 md:col-end-4 flex-col gap-32"
+      class="flex flex-col items-center justify-end gap-28 w-full h-full md:bg-green-500 md:col-start-1 md:col-end-5 md:gap-20"
     >
-      <div class="flex flex-col relative h-[6.5rem] px-14 items-center">
-        <span class="fromL absolute text-5xl italic">Lo pensaste,</span><span
-          class="fromR absolute text-5xl bottom-0 italic translate-x-[400%]"
+      <p class="flex flex-col h-fit gap-2 items-center">
+        <span class="fromL text-5xl sm:text-6xl italic">Lo pensaste,</span>
+        <span class="fromR text-5xl sm:text-6xl italic translate-x-[400%]"
           >te llegó</span
         >
-      </div>
-      <div>
-        <h2 class="text-lg text-center text-neutral-300 font-medium fadein">
-          Solución logística integral
-        </h2>
-        <h3 class="text-lg text-center text-neutral-300 font-medium fadein">
-          Obtene una solucion a medida ahora
-        </h3>
+      </p>
+      <div class="flex flex-col items-center justify-center w-full gap-6">
+        <div>
+          <h2
+            class="text-lg text-center sm:text-2xl md:text-left md:text-2xl text-neutral-300 font-medium fadein"
+          >
+            Solución logística integral
+          </h2>
+          <h3
+            class="text-lg text-center sm:text-2xl md:text-left text-neutral-300 font-medium fadein"
+          >
+            Obtene una solucion a medida ahora
+          </h3>
+        </div>
+        <button
+          class="bg-tertiary-600 text-neutral-950 h-auto py-3 px-12 text-xl rounded-lg w-fit transition-colors duration-300 ease-in-out hover:bg-tertiary-700 tracking-wide fadein2"
+        >
+          Cotizar
+        </button>
       </div>
     </div>
-    <button
-      class="bg-tertiary-600 text-neutral-950 col-start-3 col-end-7 h-auto py-2 px-2 text-xl rounded-lg w-full transition-colors duration-300 ease-in-out hover:bg-tertiary-700 tracking-wide fadein2"
-    >
-      Cotizar
-    </button>
   </div>
-  <div class="col-span-8 flex justify-center animate-bounce fadein">
+  <div class="flex justify-center animate-bounce fadein">
     <ArrowDown />
   </div>
 </section>
