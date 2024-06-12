@@ -1,12 +1,29 @@
 ---
-const { w } = Astro.props;
+const { w, o } = Astro.props;
 ---
+
+<style>
+  .fadein {
+    opacity: 0%;
+    animation: fadein 1s forwards 2.2s;
+  }
+
+  @keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 0.1;
+    }
+  }
+</style>
 
 <svg
   version="1.0"
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 512.000000 132.000000"
   width={w}
+  class="opacity-10 scale-75 fadein"
   preserveAspectRatio="xMidYMid meet"
 >
   <g
