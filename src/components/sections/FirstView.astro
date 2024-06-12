@@ -1,28 +1,91 @@
 ---
 import ArrowDown from "../../assets/icons/ArrowDown.astro";
+import LogoOp from "../../assets/LogoOp.astro";
 import Logo from "../../assets/Logo.astro";
 ---
 
-<section class="relative h-[100vh] first-mesh col-span-8">
-  <div
-    class="text-[4rem] font-bold h-full backdrop-blur-2xl grid grid-cols-4 px-10 gap-12 content-center"
-  >
-    <Logo w="300px" />
-    <div class="col-span-4 flex flex-col gap-3">
-      <h1 class="h1cl text-pretty text-4xl text-center">
-        Solución logística integral
-      </h1>
-      <p class="text-pretty text-lg text-center text-neutral-300 font-semibold">
-        Obtene una solucion a medida ahora
-      </p>
+<section
+  class="relative first-mesh col-span-8 text-[4rem] font-bold min-h-screen flex flex-col justify-between pb-8"
+>
+  <div class="grid grid-cols-8 items-center content-center gap-y-14 basis-full">
+    <div class="absolute w-full">
+      <LogoOp />
+    </div>
+    <div class="hidden md:grid md:col-start-5 md:col-end-8 md:w-full">
+      <Logo w="4em" />
+    </div>
+    <div
+      class="col-span-8 flex sm:bg-red-500 md:bg-green-500 md:col-start-1 md:col-end-4 flex-col gap-32"
+    >
+      <div class="flex flex-col relative h-[6.5rem] px-14 items-center">
+        <span class="fromL absolute text-5xl italic">Lo pensaste,</span><span
+          class="fromR absolute text-5xl bottom-0 italic translate-x-[400%]"
+          >te llegó</span
+        >
+      </div>
+      <div>
+        <h2 class="text-lg text-center text-neutral-300 font-medium fadein">
+          Solución logística integral
+        </h2>
+        <h3 class="text-lg text-center text-neutral-300 font-medium fadein">
+          Obtene una solucion a medida ahora
+        </h3>
+      </div>
     </div>
     <button
-      class="bg-tertiary-600 text-neutral-950 col-span-4 py-2 px-2 text-xl rounded-lg w-full transition-colors duration-300 ease-in-out hover:bg-tertiary-700 tracking-wide"
+      class="bg-tertiary-600 text-neutral-950 col-start-3 col-end-7 h-auto py-2 px-2 text-xl rounded-lg w-full transition-colors duration-300 ease-in-out hover:bg-tertiary-700 tracking-wide fadein2"
     >
       Cotizar
     </button>
-    <div class="absolute bottom-1 right-[45%] animate-bounce">
-      <ArrowDown />
-    </div>
+  </div>
+  <div class="col-span-8 flex justify-center animate-bounce fadein">
+    <ArrowDown />
   </div>
 </section>
+
+<style>
+  .fadein {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out 1.5s forwards;
+  }
+
+  .fadein2 {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out 1.8s forwards;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .fromL {
+    animation: fromL 1s ease-in-out;
+  }
+
+  .fromR {
+    animation: fromR 1.4s ease-in-out 0.4s forwards;
+  }
+
+  @keyframes fromL {
+    0% {
+      transform: translateX(-150%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes fromR {
+    0% {
+      transform: translateX(450%);
+    }
+    100% {
+      transform: translateX(-32%);
+    }
+  }
+</style>
