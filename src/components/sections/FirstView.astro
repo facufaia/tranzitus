@@ -5,45 +5,53 @@ import Logo from "../../assets/Logo.astro";
 ---
 
 <section
-  class="relative first-mesh col-span-8 text-[4rem] font-bold min-h-screen flex flex-col justify-between pb-8 gap-24"
+  class="relative first-mesh col-span-8 text-[4rem] font-bold min-h-screen flex flex-col justify-between pb-8 gap-24 md:gap-8"
 >
   <div
-    class="flex flex-col justify-center md:grid md:grid-cols-8 md:px-10 h-full"
+    class="flex flex-col justify-center h-full md:grid md:grid-cols-12 md:grid-rows-1"
   >
-    <div class="absolute w-full">
+    <div class="absolute w-full md:hidden">
       <LogoOp />
     </div>
-    <div class="hidden md:grid md:col-start-5 md:col-end-9 md:row-span-2">
-      <Logo w="4em" />
-    </div>
     <div
-      class="flex flex-col items-center justify-end gap-28 w-full h-full md:bg-green-500 md:col-start-1 md:col-end-5 md:gap-20"
+      class="flex flex-col items-center justify-center gap-14 w-full h-full md:col-start-2 md:col-end-7 md:w-auto md:gap-28 md:items-start"
     >
-      <p class="flex flex-col h-fit gap-2 items-center">
-        <span class="fromL text-5xl sm:text-6xl italic">Lo pensaste,</span>
-        <span class="fromR text-5xl sm:text-6xl italic translate-x-[400%]"
-          >te llegó</span
-        >
-      </p>
-      <div class="flex flex-col items-center justify-center w-full gap-6">
-        <div>
-          <h2
-            class="text-lg text-center sm:text-2xl md:text-left md:text-2xl text-neutral-300 font-medium fadein"
-          >
-            Solución logística integral
-          </h2>
-          <h3
-            class="text-lg text-center sm:text-2xl md:text-left text-neutral-300 font-medium fadein"
-          >
-            Obtene una solucion a medida ahora
-          </h3>
+      <div
+        class="flex flex-col items-center justify-center w-full gap-6 md:items-start"
+      >
+        <div class="flex flex-col justify-end gap-32 md:gap-12 md:items-start">
+          <p class="flex flex-col h-fit gap-2 items-center">
+            <span
+              class="fromL text-5xl sm:text-6xl md:text-5xl md:font-medium italic"
+              >Lo pensaste,</span
+            >
+            <span
+              class="fromR text-5xl sm:text-6xl md:text-5xl md:font-medium italic translate-x-[400%]"
+              >te llegó</span
+            >
+          </p>
+          <div>
+            <h2
+              class="text-lg text-center sm:text-2xl md:text-left md:font-light text-neutral-300 font-medium fadein"
+            >
+              Solución logística integral
+            </h2>
+            <h3
+              class="text-lg text-center sm:text-2xl md:text-left text-neutral-300 md:font-light font-medium fadein"
+            >
+              Obtene una solucion a medida ahora
+            </h3>
+          </div>
         </div>
-        <button
-          class="bg-tertiary-600 text-neutral-950 h-auto py-3 px-12 text-xl rounded-lg w-fit transition-colors duration-300 ease-in-out hover:bg-tertiary-700 tracking-wide fadein2"
-        >
-          Cotizar
-        </button>
       </div>
+      <button
+        class="bg-tertiary-600 text-neutral-950 h-auto py-3 px-12 text-xl sm:text-2xl md:text-xl rounded-lg w-fit transition-colors duration-300 ease-in-out hover:bg-tertiary-700 tracking-wide fadein2"
+      >
+        Cotizar
+      </button>
+    </div>
+    <div class="hidden md:col-start-7 md:w-[6em] md:col-end-12 md:flex">
+      <Logo />
     </div>
   </div>
   <div class="flex justify-center animate-bounce fadein">

@@ -35,27 +35,6 @@
   --tertiary-900: #7e3110;
   --tertiary-950: #441606;
 }
-
-.glow-primary-400-right {
-  -webkit-box-shadow: 0px 0px 100px 70px var(--primary-600);
-  -moz-box-shadow: 0px 0px 100px 70px var(--primary-600);
-  box-shadow: 0px 0px 100px 70px var(--primary-600);
-}
-.glow-secondary-400-right {
-  -webkit-box-shadow: 0px 0px 100px 40px var(--secondary-400);
-  -moz-box-shadow: 0px 0px 100px 40px var(--secondary-400);
-  box-shadow: 0px 0px 100px 40px var(--secondary-400);
-}
-.glow-tertiary-700-right {
-  -webkit-box-shadow: 0px 0px 100px 40px var(--tertiary-400);
-  -moz-box-shadow: 0px 0px 100px 40px var(--tertiary-400);
-  box-shadow: 0px 0px 300px 50px var(--tertiary-700);
-}
-.glow-tertiary-800-right {
-  -webkit-box-shadow: 0px 0px 100px 40px var(--tertiary-400);
-  -moz-box-shadow: 0px 0px 100px 40px var(--tertiary-400);
-  box-shadow: 0px 0px 100px 20px var(--tertiary-800);
-}
 .first-mesh {
   background: #0f172a;
   background-image: radial-gradient(
