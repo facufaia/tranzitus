@@ -11,44 +11,43 @@ const currentPath = url.pathname.slice(1);
 ---
 
 <header
-  class="col-span-8 bg-darkbg-800 flex justify-between w-full py-4 text-neutral-50 px-4 md:px-20 fixed z-50"
+  class="col-span-8 bg-darkbg-800 flex justify-between w-full py-4 text-neutral-50 px-4 md:px-20 z-50 overflow-hidden"
 >
-  <Logo w="4.5em" />
-  <nav class="w-full hidden md:flex md:justify-between md:items-center">
-    <div class="flex w-full justify-around">
-      <a
-        href="/"
-        class={`hover:text-neutral-300 transition-colors duration-300 ease-in-out ${currentPath === "" ? "text-primary-500 hover:text-primary-500 transition-none cursor-default" : ""}`}
-      >
-        INICIO
-      </a>
-      <a
-        href="#about"
-        class={`hover:text-neutral-300 transition-colors duration-300 ease-in-out ${currentPath === "sobre_nosotros" ? "text-primary-500 hover:text-primary-500 transition-none cursor-default" : ""}`}
-      >
-        SOBRE NOSOTROS
-      </a>
-      <!-- <a
+  <div class="z-50">
+    <Logo w="4.5em" />
+  </div>
+  <nav
+    id="menu"
+    class="w-full translate-x-full duration-500 ease-in-out top-0 left-0 flex fixed flex-col justify-center gap-20 items-center maskbg min-h-screen z-30 isHere md:min-h-auto md:flex-row md:justify-around md:items-center text-3xl"
+  >
+    <a
+      href="/"
+      class={`hover:text-neutral-300 transition-colors duration-300 ease-in-out ${currentPath === "" ? "text-primary-500 hover:text-primary-500 transition-none cursor-default" : ""}`}
+    >
+      INICIO
+    </a>
+    <a
+      href="#about"
+      class={`hover:text-neutral-300 transition-colors duration-300 ease-in-out ${currentPath === "sobre_nosotros" ? "text-primary-500 hover:text-primary-500 transition-none cursor-default" : ""}`}
+    >
+      SOBRE NOSOTROS
+    </a>
+    <!-- <a
         href="precios"
         class={`hover:text-neutral-300 transition-colors duration-300 ease-in-out ${currentPath === "precios" ? "text-primary-500 hover:text-primary-500 transition-none cursor-default" : ""}`}
       >
         PRECIOS
       </a> -->
-      <a
-        href="#contacto"
-        class={`hover:text-neutral-300 transition-colors duration-300 ease-in-out ${currentPath === "precios" ? "text-primary-500 hover:text-primary-500 transition-none cursor-default" : ""}`}
-      >
-        CONTACTO
-      </a>
-    </div>
-    <!-- <PrimaryBTN
-      title="OBTENE UNA COTIZACION"
-      class="hidden md:inline min-w-max font-bold"
-    /> -->
+    <a
+      href="#contacto"
+      class={`hover:text-neutral-300 transition-colors duration-300 ease-in-out ${currentPath === "precios" ? "text-primary-500 hover:text-primary-500 transition-none cursor-default" : ""}`}
+    >
+      CONTACTO
+    </a>
   </nav>
   <button
     id="menu_BTN"
-    class="rounded-xl min-w-max col-start-6 col-end-7 md:hidden"
+    class="rounded-xl min-w-max col-start-6 col-end-7 md:hidden z-50"
   >
     <svg
       fill="none"
@@ -64,6 +63,24 @@ const currentPath = url.pathname.slice(1);
     </svg>
   </button>
 </header>
+<style>
+  .maskbg {
+    backdrop-filter: blur(4px);
+    background-color: rgba(14, 19, 36, 0.85);
+  }
+  .isHere {
+    transform: translateX(0);
+    /* animation: fromRight 1s ease-in-out 0s 1 forwards; */
+  }
+  @keyframes fromRight {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+</style>
 <script>
   const menu_BTN = document.querySelector("#menu_BTN");
   menu_BTN.addEventListener("click", () => {
