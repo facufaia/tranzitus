@@ -4,58 +4,54 @@ import LogoOp from "../../assets/LogoOp.astro";
 import Logo from "../../assets/Logo.astro";
 ---
 
+<!-- class="flex flex-col justify-center h-full md:grid md:grid-cols-12 md:grid-rows-1" -->
 <section
-  class="relative first-mesh col-span-8 text-[4rem] font-bold min-h-screen flex flex-col justify-between pb-8 gap-24 md:gap-8"
+  class="relative first-mesh col-span-8 text-[4rem] font-bold min-h-screen text-center flex flex-col justify-between pb-8 gap-14 md:grid md:grid-cols-12 md:gap-8"
 >
   <div
-    class="flex flex-col justify-center h-full md:grid md:grid-cols-12 md:grid-rows-1"
+    class="flex flex-col items-center justify-center gap-8 w-full h-full md:col-start-2 md:col-end-7 md:w-auto md:gap-16 md:items-start"
   >
-    <div class="absolute w-full md:hidden">
-      <LogoOp />
-    </div>
-    <div
-      class="flex flex-col items-center justify-center gap-14 w-full h-full md:col-start-2 md:col-end-7 md:w-auto md:gap-28 md:items-start"
-    >
-      <div
-        class="flex flex-col items-center justify-center w-full gap-6 md:items-start"
-      >
-        <div class="flex flex-col justify-end gap-32 md:gap-12 md:items-start">
-          <p class="flex flex-col h-fit gap-2 items-center">
-            <span
-              class="fromL text-5xl sm:text-6xl md:text-5xl md:font-medium italic"
-              >Lo pensaste,</span
-            >
-            <span
-              class="fromR text-5xl sm:text-6xl md:text-5xl md:font-medium italic translate-x-[400%]"
-              >te llegó</span
-            >
-          </p>
-          <div>
-            <h2
-              class="text-lg text-center sm:text-2xl md:text-left md:font-light text-neutral-300 font-medium fadein"
-            >
-              Solución logística integral
-            </h2>
-            <h3
-              class="text-lg text-center sm:text-2xl md:text-left text-neutral-300 md:font-light font-medium fadein"
-            >
-              Obtene una solucion a medida ahora
-            </h3>
-          </div>
-        </div>
+    <div class="flex flex-col justify-end gap-24 md:gap-12 md:items-start">
+      <p class="flex flex-col h-fit gap-2 items-center">
+        <span
+          class="fromL text-5xl sm:text-6xl md:text-5xl md:font-medium italic"
+          >Lo pensaste,</span
+        >
+        <span
+          class="fromR text-5xl sm:text-6xl md:text-5xl md:font-medium italic translate-x-[400%]"
+          >te llegó</span
+        >
+      </p>
+      <div>
+        <h2
+          class="text-lg text-center sm:text-2xl md:text-left font-light text-neutral-300 fadein"
+        >
+          Solución logística integral
+        </h2>
+        <h3
+          class="text-lg text-center sm:text-2xl md:text-left text-neutral-300 font-light fadein"
+        >
+          Obtene una solucion a medida ahora
+        </h3>
       </div>
-      <button
-        class="bg-tertiary-600 text-neutral-950 h-auto py-3 px-12 text-xl sm:text-2xl md:text-xl rounded-lg w-fit transition-colors duration-300 ease-in-out hover:bg-tertiary-700 tracking-wide fadein2"
-      >
-        Cotizar
-      </button>
     </div>
-    <div class="hidden md:col-start-7 md:w-[6em] md:col-end-12 md:flex">
-      <Logo />
-    </div>
+    <a
+      href="#contacto"
+      class="bg-secondary-600 text-neutral-950 h-auto py-3 px-12 text-xl sm:text-2xl md:text-xl rounded-lg w-fit transition-colors duration-300 ease-in-out hover:bg-secondary-700 tracking-wide fadein2"
+    >
+      Cotizar
+    </a>
   </div>
-  <div class="flex justify-center animate-bounce fadein">
-    <ArrowDown />
+  <div class="absolute w-full h-full hidden">
+    <LogoOp />
+  </div>
+  <div class="hidden md:col-start-7 md:w-[6em] md:col-end-12 md:flex">
+    <Logo />
+  </div>
+  <div
+    class="absolute text-center bottom-0 margin-0 w-full pb-10 animate-bounce fadein"
+  >
+    <div class="inline-block"><ArrowDown /></div>
   </div>
 </section>
 
