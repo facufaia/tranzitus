@@ -1,9 +1,4 @@
 ---
-interface Props {
-  title: string;
-}
-
-const { title } = Astro.props;
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import "./styles.css";
@@ -27,16 +22,20 @@ emailjs.init({
     throttle: 10000,
   },
 });
+const title = "Tranzitus | Logística CABA y GBA";
+const description =
+  "Mejorá tu logística en Argentina con Tranzitus. Ofrecemos soluciones logísticas integrales, incluyendo transporte rápido y seguro, seguimiento en tiempo real y servicios personalizados. Optimiza tus envíos con nosotros y reduce costos mientras aumentas la satisfacción de tus clientes. Contactanos para más información y transformá tu logística hoy.";
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
-    <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
     <title>{title}</title>
+    <link rel="icon" type="image/png" href="/logo.png" />
   </head>
   <body class="text-neutral-200 bg-darkbg-700 grid grid-cols-8">
     <Header />
