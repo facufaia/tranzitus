@@ -1,7 +1,5 @@
 ---
 import Logo from "../assets/Logo.astro";
-const url = new URL(Astro.request.url);
-const currentPath = url.pathname.slice(1);
 ---
 
 <header
@@ -59,7 +57,7 @@ const currentPath = url.pathname.slice(1);
 </header>
 <style>
   .active {
-    color: rgb(129 70 255);
+    color: rgb(158 123 255);
   }
   .maskbg {
     backdrop-filter: blur(4px);

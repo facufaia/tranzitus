@@ -37,20 +37,6 @@ emailjs.init({
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=AW-16586537563"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "AW-16586537563");
-    </script>
   </head>
   <body class="text-neutral-200 bg-darkbg-700 grid grid-cols-8">
     <Header />
@@ -66,6 +52,9 @@ emailjs.init({
     font-family: Roboto, ui-sans-serif, system-ui, sans-serif,
       "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
       "Noto Color Emoji";
+  }
+  body {
+    overflow-x: hidden;
   }
   .no-scroll {
     overflow: hidden;
