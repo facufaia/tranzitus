@@ -1,34 +1,28 @@
 ---
 import Logo from "../assets/Logo.astro";
-import PrimaryBTN from "./atoms/PrimaryBTN.astro";
-
-interface Props {
-  currentPath: string;
-}
-
 const url = new URL(Astro.request.url);
 const currentPath = url.pathname.slice(1);
 ---
 
 <header
-  class="col-span-8 bg-darkbg-800 flex justify-between w-full py-4 text-neutral-50 px-4 md:px-20 z-50"
+  class="col-span-8 bg-darkbg-800 flex justify-between fixed w-full py-4 text-neutral-50 px-4 md:px-20 md:gap-24 z-50"
 >
-  <div class="z-50">
+  <div class="z-50 flex items-center justify-center">
     <Logo w="4.5em" />
   </div>
   <nav
     id="menu"
-    class="w-full translate-x-full duration-500 ease-in-out top-0 left-0 flex fixed flex-col justify-center gap-20 items-center maskbg min-h-screen z-30 md:min-h-auto md:flex-row md:justify-around md:items-center text-2xl md:text-lg"
+    class="w-full translate-x-full duration-500 ease-in-out top-0 left-0 flex fixed flex-col justify-center gap-20 items-center maskbg min-h-screen z-30 md:min-h-full md:flex-row md:translate-x-0 md:relative md:justify-around md:items-start text-2xl md:text-lg"
   >
     <a
-      href="/"
-      class={`hover:text-neutral-300 transition-colors duration-300 ease-in-out ${currentPath === "" ? "text-primary-500 hover:text-primary-500 transition-none cursor-default" : ""}`}
+      href="#inicio"
+      class={`hover:text-neutral-300 tracking-wide transition-colors duration-300 ease-in-out active`}
     >
       INICIO
     </a>
     <a
       href="#about"
-      class={`hover:text-neutral-300 transition-colors duration-300 ease-in-out ${currentPath === "sobre_nosotros" ? "text-primary-500 hover:text-primary-500 transition-none cursor-default" : ""}`}
+      class={`hover:text-neutral-300 tracking-wide transition-colors duration-300 ease-in-out`}
     >
       SOBRE NOSOTROS
     </a>
@@ -40,7 +34,7 @@ const currentPath = url.pathname.slice(1);
       </a> -->
     <a
       href="#contacto"
-      class={`hover:text-neutral-300 transition-colors duration-300 ease-in-out ${currentPath === "precios" ? "text-primary-500 hover:text-primary-500 transition-none cursor-default" : ""}`}
+      class={`hover:text-neutral-300 tracking-wide transition-colors duration-300 ease-in-out`}
     >
       CONTACTO
     </a>
@@ -64,21 +58,15 @@ const currentPath = url.pathname.slice(1);
   </button>
 </header>
 <style>
+  .active {
+    color: rgb(129 70 255);
+  }
   .maskbg {
     backdrop-filter: blur(4px);
     background-color: rgba(14, 19, 36, 0.85);
   }
   .isHere {
     transform: translateX(0);
-    /* animation: fromRight 1s ease-in-out 0s 1 forwards; */
-  }
-  @keyframes fromRight {
-    from {
-      transform: translateX(100%);
-    }
-    to {
-      transform: translateX(0);
-    }
   }
 </style>
 <script>
@@ -92,11 +80,28 @@ const currentPath = url.pathname.slice(1);
     body.classList.toggle("no-scroll");
   });
 
-  // Asegura que el menú se oculte al hacer clic en un enlace, pero permite que el enlace funcione normalmente
   menuLinks.forEach((link) => {
-    link.addEventListener("click", () => {
+    link.addEventListener("click", (e) => {
       menu.classList.remove("isHere");
       body.classList.remove("no-scroll");
     });
   });
+
+  let sections = document.querySelectorAll("section");
+  window.onscroll = () => {
+    sections.forEach((sec) => {
+      let top = window.scrollY;
+      let offset = sec.offsetTop - 150;
+      let height = sec.offsetHeight;
+      let id = sec.getAttribute("id");
+      if (top >= offset && top < offset + height) {
+        menuLinks.forEach((links) => {
+          links.classList.remove("active");
+          document
+            .querySelector("header nav a[href*=" + id + "]")
+            .classList.add("active");
+        });
+      }
+    });
+  };
 </script>
