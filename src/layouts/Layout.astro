@@ -22,6 +22,7 @@ emailjs.init({
     throttle: 10000,
   },
 });
+
 const title = "Tranzitus | Logística CABA y GBA";
 const description =
   "Mejorá tu logística en Argentina con Tranzitus. Ofrecemos soluciones logísticas integrales, incluyendo transporte rápido y seguro, seguimiento en tiempo real y servicios personalizados. Optimiza tus envíos con nosotros y reduce costos mientras aumentas la satisfacción de tus clientes. Contactanos para más información y transformá tu logística hoy.";
@@ -37,7 +38,7 @@ const description =
     <title>{title}</title>
     <link rel="icon" type="image/png" href="/logo.png" />
   </head>
-  <body class="text-neutral-200 bg-darkbg-700 grid grid-cols-8">
+  <body class="text-neutral-200 bg-darkbg-700 grid grid-cols-8 w-screen">
     <Header />
     <slot />
     <Footer />

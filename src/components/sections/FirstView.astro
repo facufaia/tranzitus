@@ -15,11 +15,11 @@ import Logo from "../../assets/Logo.astro";
     <div class="flex flex-col justify-end gap-24 md:gap-12 md:items-start">
       <p class="flex flex-col h-fit gap-2 items-center">
         <span
-          class="fromL text-5xl sm:text-6xl md:text-5xl md:font-medium italic"
+          class="fromL text-5xl sm:fromLL sm:opacity-0 sm:text-6xl md:text-5xl md:font-medium italic"
           >Lo pensaste,</span
         >
         <span
-          class="fromR text-5xl sm:text-6xl md:text-5xl md:font-medium italic translate-x-[400%]"
+          class="fromR text-5xl sm:fromRR sm:opacity-0 sm:text-6xl md:text-5xl md:font-medium italic translate-x-[400%]"
           >te llegó</span
         >
       </p>
@@ -38,7 +38,7 @@ import Logo from "../../assets/Logo.astro";
     </div>
     <a
       href="#contacto"
-      class="bg-secondary-600 text-neutral-950 h-auto py-3 px-12 text-xl sm:text-2xl md:text-xl rounded-lg w-fit transition-colors duration-300 ease-in-out hover:bg-secondary-700 tracking-wide fadein2"
+      class="bg-secondary-600 text-neutral-950 h-auto py-2 px-12 text-xl sm:text-2xl md:text-xl rounded-lg w-fit transition-colors duration-300 ease-in-out hover:bg-secondary-700 tracking-wide fadein2"
     >
       Cotizar
     </a>
@@ -77,28 +77,37 @@ import Logo from "../../assets/Logo.astro";
   }
 
   .fromL {
-    animation: fromL 1s ease-in-out;
+    animation: fromL 1s ease-in-out forwards;
   }
-
+  .fromLL {
+    animation: fromLL 1s ease-in-out 0.4s forwards;
+  }
   .fromR {
     animation: fromR 1.4s ease-in-out 0.4s forwards;
+  }
+  .fromRR {
+    animation: fromRR 1.4s ease-in-out 0.4s forwards;
   }
 
   @keyframes fromL {
     0% {
       transform: translateX(-150%);
+      opacity: 0%;
     }
     100% {
       transform: translateX(0);
+      opacity: 100%;
     }
   }
 
   @keyframes fromR {
     0% {
       transform: translateX(450%);
+      opacity: 0%;
     }
     100% {
       transform: translateX(-32%);
+      opacity: 100%;
     }
   }
 </style>

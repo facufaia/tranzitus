@@ -1,13 +1,15 @@
 ---
 interface Props {
-    title: string;
-    class: string;
+  title: string;
+  class: string;
 }
 
-const { title, class: classes } = Astro.props
+const { title, class: classes } = Astro.props;
 ---
 
-<button class={`px-2 py-1 bg-primary-500 hover:bg-primary-600 text-neutral-800 hover:text-neutral-950 transition-colors duration-300 ease-in-out rounded-md ${classes}`}>
+<button
+  class={`py-[0.4rem] px-2 bg-primary-500 hover:bg-primary-600 text-neutral-800 hover:text-neutral-950 transition-colors duration-300 ease-in-out rounded-md ${classes}`}
+>
   <a href="/contacto">
     {title}
   </a>

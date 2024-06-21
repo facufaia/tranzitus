@@ -1,10 +1,4 @@
 ---
-interface Props {
-  currentPath: string;
-}
-
-const url = new URL(Astro.request.url);
-const currentPath = url.pathname.slice(1);
 import WhatsApp from "../assets/icons/WhatsApp.astro";
 import Meta from "../assets/icons/Meta.astro";
 import Instagram from "../assets/icons/Instagram.astro";
@@ -20,22 +14,25 @@ import Mail from "../assets/icons/Mail.astro";
       <Mail /><span>info@tranzitus.com</span>
     </div>
     <div class="flex gap-2 leading-5">
-      <Phone /><span>+54 9 11 5108-6187</span>
+      <Phone /><span>+54 9 11 6021-8326</span>
     </div>
   </section>
   <section class="gap-4 flex md:col-start-6 md:col-end-8 md:justify-end">
     <a
-      href="https://wa.me/5491151086187"
+      target="_blank"
+      href="https://wa.me/5491160218326"
       class="hover:scale-110 transition-transform duration-300 ease-in-out"
       ><WhatsApp /></a
     >
     <a
-      href="#"
+      target="_blank"
+      href="https://www.instagram.com/tranzitus_/"
       class="hover:scale-110 transition-transform duration-300 ease-in-out"
       ><Instagram /></a
     >
     <a
-      href="#"
+      target="_blank"
+      href="https://www.facebook.com/profile.php?id=61560990837288"
       class="hover:scale-110 transition-transform duration-300 ease-in-out"
       ><Meta /></a
     >
